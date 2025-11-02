@@ -1,0 +1,11 @@
+@media screen and (min-width: 40rem) {
+    
+    header{
+    display: grid;
+    grid-template-columns: 48px auto ;
+}
+
+    .hamburger{
+        display: none;
+    }
+}
