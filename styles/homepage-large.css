@@ -1,11 +1,56 @@
 @media screen and (min-width: 40rem) {
-    
+    /*  -------------------H E A D E R ------------------ */
     header{
     display: grid;
     grid-template-columns: 48px auto ;
-}
+    }
+
+    #navigation ul{
+        display: flex;
+        margin: 0;
+    }
+
+    #navigation {
+        display: inline;
+    }
 
     .hamburger{
         display: none;
     }
+
+    /* --------------------M A I N ---------------------- */
+    
+
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+
+    main h1{
+    grid-column: 1/4;
+    }
+
+    main #aboutMe{
+        grid-column: 1/3;
+
+    }
+
+    main #studentPhoto{
+        width: fit-content;
+        grid-column: 3/4;
+
+    }
+
+    main button{
+    width: 100%;
+    }
+
+    #courses{
+        grid-column: 1/4;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+
 }

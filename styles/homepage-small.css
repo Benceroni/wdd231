@@ -1,10 +1,12 @@
 :root{
-    
+    --primary-color:black;
+    --secondary-color: hsl(240, 56%, 35%);
 }
 
 header, main, footer{
     max-width: 900px;
     margin: 0 auto;
+    font-family: "Lexend", sans-serif;
 }
 
 /* -----------------H E A D E R------------------- */
@@ -43,29 +45,97 @@ header img{
 /* -----------------------N A V I G A T I O N   L I N K S----------------------- */
 #navigation{
     grid-column: 1/4;
+    display: none;
 
 }
+
 #navigation ul{
     padding: 0;
-    width: 100%;
+    display: block;
     list-style-type: none;
+    transition: 300ms;
 }
 
-#navigation ul li {
-    /* width: 100%;s */
-    padding: 1rem;
-    /* text-align: center; */
+#navigation li {
+    display: grid;
 }
 
 
 
 #navigation ul :hover{
-    background-color: gainsboro;
+    background-color: var(--secondary-color);
+    color: white;
+    transition: 300ms;
 }
 
-#navigation ul li a{
-    width: 100%;
+#navigation a{
+    
+    padding: 1rem;
     text-decoration: none;
-    color: black;
+    color: var(--secondary-color);
     font-size: x-large;
+}
+
+
+/* ------------------------------M A I N ------------------------------- */
+
+main h2{
+    color: white;
+    margin: 0;
+    padding: .7rem;
+    background-color: var(--secondary-color);
+    text-align: center;
+}
+main #studentPhoto img{
+    display: block;
+    width: 90%;
+    height: auto;
+    margin: 1rem auto;
+}
+
+main p{
+    font-size: x-large;
+    padding: 1rem;
+}
+
+main button{
+    background-color: var(--secondary-color);
+    color: white;
+    width: 32%;
+    border: none;
+    font-family: "Lexend", sans-serif;
+    padding: 1rem;
+    font-size: large;
+}
+
+/* ------------C O U R S E S    D I S P L A Y---------------- */
+
+.complete{
+    background-color: hsla(240, 56%, 35%, 0.8);
+    color: white;
+}
+
+
+/* ------------------------ F O O T E R----------------------- */
+
+footer{
+    display: grid;
+}
+
+#links{
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    max-width: 300px;
+}
+
+#links img{
+    padding: 1rem;
+    width: 80%;
+    height: auto;
+}
+
+footer span{
+    width: 100%;
+    text-align: center;
 }

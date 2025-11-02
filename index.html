@@ -12,9 +12,16 @@
     <link rel="stylesheet" href="styles/homepage-small.css">
     <link rel="stylesheet" href="styles/homepage-large.css">
 
+    <!-- fonts. Because choosing a default font family is too easy -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
     <!-- javascript -->
      <script src="scripts/dates.js" defer></script>
      <script src="scripts/navigation.js" defer></script>
+     <script src="scripts/courses.js" defer></script>
 </head>
 <body>
     <header>
@@ -32,9 +39,27 @@
         </nav>
     </header>
     <main>
-
+        <h1>Home</h1>
+        <div id="aboutMe">
+            <h2>About Me</h2>
+            <p>I love programming. I want to develop video games and already do- even if I'm not the greatest.<br> Professionally, I work on cars. Changing oil and rotating tires and holding the flashlight for real mechanics.<br> I also have a lot of hobbies: painting, 3d modeling, woodworking, car repair, photography, book making, graphic design, making music, jewelry, spending time with my future wife- the list feels endless.</p>
+        </div>
+        <div id="studentPhoto">
+            <h2>Student Photo</h2>
+            <img src="images/me_disliking_web_pee.webp" alt="photo of me, as I thought about webp taken by my lovely girlfriend" width="623" height="1200">
+        </div>
+            <button type="button" id="allCourses">All Courses</button>
+            <button type="button" id="WDDCourses">WDD Courses</button>
+            <button type="button" id="CSECourses">CSE Courses</button>
+        <span id="totalCourses"></span>
+        <div id="courses"></div>
     </main>
     <footer>
+        <div id="links">
+            <a href="https://github.com/Benceroni"><img src="images/github.svg" alt="github link"></a>
+            <a href="https://www.youtube.com/@CompulsiveSimulation"><img src="images/youtube.svg" alt="comuplsive Sim Studio link"></a>
+            <a href="https://www.instagram.com/bence.drops.the.camera"><img src="images/linkedin.svg" alt="the finstagram"></a>
+        </div>
         <span id="lastModified"></span>
         <span id="currentYear"> </span>
     </footer>
