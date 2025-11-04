@@ -137,7 +137,7 @@ function renderTotalCourses(courseArray){
     document.querySelector("#totalCourses").innerHTML = `Total number of credits shown: ${courseArray.reduce((accumulator,currentValue) => accumulator + currentValue.credits, 0)}`
 }
 
-
+showAllCourses();
 
 document.querySelector("#allCourses").addEventListener("click",function(){showAllCourses()});
 document.querySelector("#WDDCourses").addEventListener("click",function(){showWddCourses()});

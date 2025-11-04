@@ -64,7 +64,9 @@ header img{
     display: grid;
 }
 
-
+#navigation{
+    background-color: aliceblue;
+}
 
 #navigation ul :hover{
     background-color: var(--secondary-color);
