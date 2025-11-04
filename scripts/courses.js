@@ -82,25 +82,24 @@ const courseDestination = document.querySelector("#courses");
 
 function showAllCourses(){
     courseDestination.innerHTML = ""
-    coursesToCount = []
-    courses.forEach(course => {
+    const relevantCourses = courses;
+    // .filter(course=> course.completed ==true)
+    relevantCourses.forEach(course => {
         if (course.completed === true){
             renderCompletedCourse(course.title)
         }
         else{
             renderCourse(course.title);
         }
-    });
-    countCourses();
+    })
+
+    renderTotalCourses(relevantCourses)
 }
 
 function showWddCourses(){
     courseDestination.innerHTML = ""
-    coursesToCount = []
-    courses.forEach(course => {
-        if (course.subject != "WDD"){
-            return
-        }
+    const relevantCourses = courses.filter(course => course.subject == "WDD")
+    relevantCourses.forEach(course => {
         if (course.completed === true){
             renderCompletedCourse(course.title)
         }
@@ -108,38 +107,37 @@ function showWddCourses(){
             renderCourse(course.title);
         }
     });
-    countCourses();
+    renderTotalCourses(relevantCourses);
 }
 
 function showCseCourses(){
     courseDestination.innerHTML = ""
-    coursesToCount = []
-    courses.forEach(course => {
-        if (course.subject != "CSE"){
-            return
-        }
+    const relevantCourses = courses.filter(course => course.subject == "CSE")
+    relevantCourses.filter(course => {
         if (course.completed === true){
             renderCompletedCourse(course.title)
         }
         else{
             renderCourse(course.title);
         }
-    
     });
-    countCourses();
+    renderTotalCourses(relevantCourses);
 }
 
 function renderCourse(courseName){
     courseDestination.innerHTML += `<p>${courseName}</p>`
 }
 function renderCompletedCourse(courseName){
-    console.log("completed course rendered")
+    // console.log("completed course rendered")
     courseDestination.innerHTML += `<p class="complete">${courseName}✅</p>`
 }
 
+function renderTotalCourses(courseArray){
+    console.log(courseArray);
+    document.querySelector("#totalCourses").innerHTML = `Total number of credits shown: ${courseArray.reduce((accumulator,currentValue) => accumulator + currentValue.credits, 0)}`
+}
 
 
-// document.querySelector("#totalCourses").innerHTML = `Total number of courses shown: ${}`
 
 document.querySelector("#allCourses").addEventListener("click",function(){showAllCourses()});
 document.querySelector("#WDDCourses").addEventListener("click",function(){showWddCourses()});

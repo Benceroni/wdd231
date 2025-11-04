@@ -3,6 +3,11 @@
     --secondary-color: hsl(240, 56%, 35%);
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 header, main, footer{
     max-width: 900px;
     margin: 0 auto;
@@ -46,7 +51,6 @@ header img{
 #navigation{
     grid-column: 1/4;
     display: none;
-
 }
 
 #navigation ul{
@@ -76,8 +80,16 @@ header img{
     font-size: x-large;
 }
 
+#navigation.show{
+    display: block;
+}
 
 /* ------------------------------M A I N ------------------------------- */
+
+main div{
+    background-color: aliceblue;
+    border-radius: .5rem;
+}
 
 main h2{
     color: white;
@@ -88,6 +100,7 @@ main h2{
 }
 main #studentPhoto img{
     display: block;
+    padding: 1rem;
     width: 90%;
     height: auto;
     margin: 1rem auto;
@@ -106,6 +119,10 @@ main button{
     font-family: "Lexend", sans-serif;
     padding: 1rem;
     font-size: large;
+}
+
+section #filler{
+    display: none;
 }
 
 /* ------------C O U R S E S    D I S P L A Y---------------- */
