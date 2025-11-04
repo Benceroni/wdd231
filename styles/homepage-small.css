@@ -121,7 +121,7 @@ main button{
     font-size: large;
 }
 
-section #filler{
+section#filler{
     display: none;
 }
 
