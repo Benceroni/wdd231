@@ -1,0 +1,22 @@
+:root{
+    --primary-color:black;
+    --secondary-color: #bda321;
+    --content-max-width: 900px;
+    --header-background-color:#1c769f9d; 
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+header, main, footer{
+    margin: 0 auto;
+    font-family: "Lexend", sans-serif;
+    /* padding: 0 1rem; */
+    
+}
+
+main,footer{
+    max-width: var(--content-max-width);
+}

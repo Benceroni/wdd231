@@ -1,0 +1,37 @@
+section p {font-size: 21px};
+
+@media only screen and (min-width: 32rem) {
+     section {font-size: 300px};
+}
+
+header,main,footer{
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+
+}
+
+#cards section{
+    background-color: aliceblue;
+    text-align: center;
+}
+
+
+
+#cards section img{
+    display: block;
+    padding-bottom: 1rem;
+    margin: 0 auto;
+}
+
+footer{
+    text-align: center;
+    padding: 2rem;
+    background-color: blanchedalmond;
+}

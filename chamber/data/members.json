@@ -1,0 +1,67 @@
+{
+"members": [
+    {
+        "name":"Misriah Manufacturing",
+        "address":"2550 E. Finding way, Boise,ID 83701",
+        "phoneNumber":"+1 (208) 893-4927",
+        "websiteURL":"https://www.MisriahManf.com",
+        "websiteName":"MisriahManf.com",
+        "imageAddress":"",
+        "membershipLevel":"1"
+    },
+    {
+        "name":"AMG Transport",
+        "address":"142 E. Asklon ct, Boise, ID 83706",
+        "phoneNumber":"+1 (986) 349-9764",
+        "websiteURL":"https://www.AMGtransport.com",
+        "websiteName":"AMGtransport.com",
+        "imageAddress":"",
+        "membershipLevel":"2"
+    },
+    {
+        "name":"Tterrab Industries",
+        "address":"2004 W. Stamp Ave, Boise, ID 83711",
+        "phoneNumber":"+1 (208) 111-4200",
+        "websiteURL":"Https://www.Tterrab.com",
+        "websiteName":"Tterrab.com",
+        "imageAddress":"images/chamber_of_commerce_logo.svg",
+        "membershipLevel":"3"
+    },
+    {
+        "name":"Iteru Water Management",
+        "address":"13 S. Parker St, Boise, ID 83732",
+        "phoneNumber":"+1 (986) 562-1884",
+        "websiteURL":"Https://www.iteru.us",
+        "websiteName":"iteru.us",
+        "imageAddress":"",
+        "membershipLevel":"2"
+    },
+    {
+        "name":"Ministry of Majic",
+        "address":"197 E. Privet Dr, boise, ID 83754",
+        "phoneNumber":"+1 (208) 323-4550",
+        "websiteURL":"https://www.MinistryofMajic.com",
+        "websiteName":"MinistryofMajic.com",
+        "imageAddress":"",
+        "membershipLevel":"2"
+    },
+    {
+        "name":"Jaslight Jidustries",
+        "address":"9907 S. Pullchain Way, Boise, ID 83701",
+        "phoneNumber":"+1 (208) 795-5122",
+        "websiteURL":"https://www.bigJaslight.com",
+        "websiteName":"BigJaslight.com",
+        "imageAddress":"",
+        "membershipLevel":"1"
+    },   
+    {
+        "name":"R. Hoe & Co.",
+        "address":"217 E Main St, Boise, ID 83722",
+        "phoneNumber":"+1 (208) 889-2658",
+        "websiteURL":"Https://www.rhoeandco.com",
+        "websiteName":"RHoeandCo.com",
+        "imageAddress":"",
+        "membershipLevel":"1"
+    }
+]
+}

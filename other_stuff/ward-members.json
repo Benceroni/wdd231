@@ -1,0 +1,20 @@
+{
+    "family" :{
+        "name": "johnsons",
+        "moveInDate": "12-13-2024",
+        "totalMembers": 2,
+        "bishopricVisit": true,
+        "individuals":[
+            {
+                "name": "Heber",
+                "gender": "male",
+                "birthdate": "01-25-1990"
+            },
+            {
+                "name": "Madeline",
+                "gender": "female",
+                "birthdate": "09-02-1992"
+            }
+        ]
+    }
+}
