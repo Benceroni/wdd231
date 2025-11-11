@@ -4,13 +4,12 @@ main #cards{
     gap: 2rem;
 }
 
-#cards section{
-    /* width: 320px; */
-    text-align: center;
-    border: solid black;
-}
 
 #cards section{
+
+    text-align: center;
+    border: solid black;
+
     display: grid;
     grid-template-rows: auto;
     padding: 1rem;
