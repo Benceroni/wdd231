@@ -13,23 +13,29 @@ main #cards{
     display: grid;
     grid-template-rows: auto;
     padding: 1rem;
+}
 
-    a,p,h3{
-        padding: .5rem;
-        margin: 0;
-    }
-    a{
+#cards section a{
         text-decoration: none;
         color: black;
         font-weight: bold;
+        padding: .5rem;
+        margin: 0;
     }
-    a:hover{
-        /* font-weight: bold; */
+#cards section p{
+        padding: .5rem;
+        margin: 0;
+    }
+#cards section h3{
+        padding: .5rem;
+        margin: 0;
+    }
+
+#cards section a:hover{
         color: white;
         background-color: var(--secondary-color);
         transition: 300ms;
     }
-}
 
 #cards section img{ 
     padding: 1rem;
@@ -61,20 +67,23 @@ main #cards{
 #cards.list{
     grid-template-columns: 1fr;
     row-gap: 0;
-    
-    section:nth-child(odd){
+}
+
+#cards.list section:nth-child(odd){
     background-color: var(--list-color-two);
     }
-    section img{
+
+#cards.list section img{
         display: none;
     }
-    section p, section a, section h3{
+    
+#cards.list section p, #cards.list section a, #cards.list section h3{
         /* font-size: ; */
         padding: 1rem;
         margin: auto 0;
         text-align: left;
     }
-}
+
 #cards.list section{
         background-color: var(--list-color-one);
         border: none;
@@ -83,13 +92,12 @@ main #cards{
     }
 
 @media only screen and (max-width: 32rem) {
-    #cards.list{
-        section{
-            padding: .1rem;
-        }
-        section p, section a, section h3{
-            padding: .2rem;
-            font-size: x-small;
-        }
-    }
+    #cards.list section{
+                padding: .1rem;
+            }
+
+    #cards.list section p, section a, section h3{
+                padding: .2rem;
+                font-size: x-small;
+            }
 }
