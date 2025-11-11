@@ -35,6 +35,7 @@ const displayMembers = (members =>{
 
         //card child appends
         card.appendChild(_logo);
+        card.appendChild(_name);
         card.appendChild(_address);
         card.appendChild(_phone);
         card.appendChild(_website);
