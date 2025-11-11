@@ -15,3 +15,5 @@ function addListView(){
 function removeListView(){
     listContainer.classList.remove("list");
 }
+
+// updating title hopefully
