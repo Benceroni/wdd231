@@ -1,0 +1,16 @@
+main #cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    gap: 2rem;
+}
+
+#cards section{
+    max-width: 320px;
+    text-align: center;
+}
+
+#cards section img{
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}

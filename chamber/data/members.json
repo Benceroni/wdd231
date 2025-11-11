@@ -6,7 +6,7 @@
         "phoneNumber":"+1 (208) 893-4927",
         "websiteURL":"https://www.MisriahManf.com",
         "websiteName":"MisriahManf.com",
-        "imageAddress":"",
+        "imageAddress":"images/misriah_logo.webp",
         "membershipLevel":"1"
     },
     {
@@ -15,7 +15,7 @@
         "phoneNumber":"+1 (986) 349-9764",
         "websiteURL":"https://www.AMGtransport.com",
         "websiteName":"AMGtransport.com",
-        "imageAddress":"",
+        "imageAddress":"images/H5G_AMG.webp",
         "membershipLevel":"2"
     },
     {
@@ -24,7 +24,7 @@
         "phoneNumber":"+1 (208) 111-4200",
         "websiteURL":"Https://www.Tterrab.com",
         "websiteName":"Tterrab.com",
-        "imageAddress":"images/chamber_of_commerce_logo.svg",
+        "imageAddress":"images/tterrab_logo.webp",
         "membershipLevel":"3"
     },
     {
@@ -33,7 +33,7 @@
         "phoneNumber":"+1 (986) 562-1884",
         "websiteURL":"Https://www.iteru.us",
         "websiteName":"iteru.us",
-        "imageAddress":"",
+        "imageAddress":"images/iteru_logo.svg",
         "membershipLevel":"2"
     },
     {
@@ -42,7 +42,7 @@
         "phoneNumber":"+1 (208) 323-4550",
         "websiteURL":"https://www.MinistryofMajic.com",
         "websiteName":"MinistryofMajic.com",
-        "imageAddress":"",
+        "imageAddress":"images/ministry_logo.svg",
         "membershipLevel":"2"
     },
     {
@@ -51,7 +51,7 @@
         "phoneNumber":"+1 (208) 795-5122",
         "websiteURL":"https://www.bigJaslight.com",
         "websiteName":"BigJaslight.com",
-        "imageAddress":"",
+        "imageAddress":"images/big_jaslight_logo.webp",
         "membershipLevel":"1"
     },   
     {
@@ -60,7 +60,7 @@
         "phoneNumber":"+1 (208) 889-2658",
         "websiteURL":"Https://www.rhoeandco.com",
         "websiteName":"RHoeandCo.com",
-        "imageAddress":"",
+        "imageAddress":"images/r_hoe_and_co_logo.svg",
         "membershipLevel":"1"
     }
 ]

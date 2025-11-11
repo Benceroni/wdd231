@@ -20,3 +20,10 @@ header, main, footer{
 main,footer{
     max-width: var(--content-max-width);
 }
+
+footer{
+    display: grid;
+    text-align: center;
+    padding: 2rem;
+    /* background-color: blanchedalmond; */
+}
