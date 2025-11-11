@@ -61,15 +61,10 @@ main #cards{
 #cards.list{
     grid-template-columns: 1fr;
     row-gap: 0;
-    section{
-        background-color: var(--list-color-one);
-        border: none;
-        grid-template-columns:  1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-    }
+    
     section:nth-child(odd){
     background-color: var(--list-color-two);
-}
+    }
     section img{
         display: none;
     }
@@ -80,6 +75,12 @@ main #cards{
         text-align: left;
     }
 }
+#cards.list section{
+        background-color: var(--list-color-one);
+        border: none;
+        grid-template-columns:  1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
 
 @media only screen and (max-width: 32rem) {
     #cards.list{
