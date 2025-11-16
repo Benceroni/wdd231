@@ -60,13 +60,31 @@
     </header>
     <main>
         <section id="heroimage">
-            <img src="images/hero_image_wide.webp" alt="downtown boise mid construction">
-            <h2>Boise Chamber of Commerce</h2>
-            <h3>Building Boise Together.</h3>
+            <picture>
+                <source media="(max-width: 32rem)" srcset="images/hero_image_mobile.webp">
+                <img src="images/hero_image_wide.webp" alt="downtown boise mid construction">
+            </picture>
+            <section id="heroText">
+                <h2>Boise Chamber of Commerce</h2>
+                <h3>Building Boise Together.</h3>
+            </section>
+            <a href="#" id="joinButton">Join Now</a>
         </section>
         <h1>Home</h1>
         
-        <div id="cards"></div>
+        <section id="currentEvents" class="homeCard">
+            <h3>Events</h3>
+            <img src="" alt="">
+        </section>
+        <section id="weather">
+            <section id="currentWeather"class="homeCard">
+                <h3></h3>
+            </section>
+            <section id="forecastWeather">
+                <h3></h3>
+            </section>
+        </section>
+        <section id="cardHighlight"></section>
     </main>
     <footer>
         <div id="footerContainer">
