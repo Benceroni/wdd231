@@ -6,17 +6,31 @@
 }
 
 .homeCard{
-    background-color: var(--header-background-color);
     max-width: 100%;
+    /* border-radius: .5rem; */
+    /* border: 3px solid var(--header-background-color) */
+    box-shadow: 0px 2px 2px var(--header-background-color);
 }
 
 .homeCard h3{
     padding: .5rem;
     margin: auto 0;
+    background-color: var(--header-background-color);
+    /* border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem; */
+    
 }
 
 .homeCard img{
     max-width: 100%;
+    height: auto;
+    justify-self: center;
+}
+
+.homeCard p, #weatherContent{
+    padding: 1rem;
+    margin: 0;
+    /* background-color: white; */
 }
 
 .homeCard#currentEvents{
@@ -30,14 +44,24 @@
     gap: 1rem;
 }
 
+#weatherContent{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+
 @media only screen and (max-width: 32rem) {
 
+    .homeCard#currentEvents{
+    grid-column: 1/2;
+    }
     #gridFlowSection{
         grid-template-columns: 1fr;
     }
     .homeCard#cardHighlight{
-        grid-column: 1/2;
         grid-template-columns: 1/2;
+        grid-column: 1/2;
+        
     }
 
 }

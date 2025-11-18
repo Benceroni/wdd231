@@ -1,11 +1,14 @@
 const url = "data/members.json"
 
 const cards = document.querySelector("#cards");
+const homepageCards = document.querySelector("#cardHighlight");
+
 
 async function getMemberData(){
     const response = await fetch(url);
     const data = await response.json();
-    displayMembers(data.members)
+    if (cards){displayMembers(data.members)}
+    if (homepageCards){displayHomecards(data.members)}
 }
 
 getMemberData();
@@ -45,3 +48,46 @@ const displayMembers = (members =>{
         cards.appendChild(card);
     });
 })
+
+function randomInteger(min, max) {
+  return Math.floor(Math.random() * (max - min )) + min;
+}
+
+function removeAtWithFilter(array, index) {
+  return array.filter((_, i) => i !== index);
+}
+
+const displayHomecards = (members =>{
+    console.table(members);
+    var qualifiedMembers = members.filter((member) => member.membershipLevel >= 2);
+
+    for (let i=0; i<3; i++){
+        const memberLoopId = randomInteger(0,qualifiedMembers.length);
+        console.log(memberLoopId)
+        console.log(qualifiedMembers[memberLoopId])
+        const selectedMember = qualifiedMembers[memberLoopId];
+
+        const card      = document.createElement("section");
+        const _name     = document.createElement("h3");
+        const _logo     = document.createElement("img");
+        const _email    = document.createAttribute("p")
+        const _phone    = document.createElement("p");
+        const _website  = document.createElement("a");
+        
+
+        _logo.setAttribute("src",selectedMember.imageAddress);
+        _logo.setAttribute("alt",`Image of ${selectedMember.name} logo.`);
+        _logo.setAttribute("height", "100");
+
+        _name.textContent       = selectedMember.name;
+        _email.textContent      = `Support@${selectedMember.websiteURL}`
+        _phone.textContent      = selectedMember.phoneNumber;
+        _website.textContent    = selectedMember.websiteName;
+        _website.href           = selectedMember.websiteURL;
+
+        qualifiedMembers.splice()
+    }
+
+}
+
+)
