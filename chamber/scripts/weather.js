@@ -1,13 +1,13 @@
 const currentWeatherElement = document.querySelector("#currentWeather");
 const weatherForecastElement = document.querySelector("#forecastWeather");
 
-const url = 'https://api.openweathermap.org/data/2.5/weather?lat=43.60&lon=-116.24&appid=fc9fe556276fc9142140291bdb778812&units=imperial'
+const url1 = 'https://api.openweathermap.org/data/2.5/weather?lat=43.60&lon=-116.24&appid=fc9fe556276fc9142140291bdb778812&units=imperial'
 
 
 
 async function apiFetch() {
     try{
-        const response = await fetch(url);
+        const response = await fetch(url1);
         if (response.ok){
             const data = await response.json();
             displayResults(data);

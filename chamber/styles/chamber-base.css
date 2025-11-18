@@ -35,6 +35,6 @@ footer{
     margin: 0 auto;
     display: grid;
     text-align: center;
-
+    grid-template-columns: 1fr 1fr 1fr;
     max-width: var(--content-max-width);
 }

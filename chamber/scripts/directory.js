@@ -70,7 +70,7 @@ const displayHomecards = (members =>{
         const card      = document.createElement("section");
         const _name     = document.createElement("h3");
         const _logo     = document.createElement("img");
-        const _email    = document.createAttribute("p")
+        const _email    = document.createElement("p")
         const _phone    = document.createElement("p");
         const _website  = document.createElement("a");
         
@@ -80,12 +80,20 @@ const displayHomecards = (members =>{
         _logo.setAttribute("height", "100");
 
         _name.textContent       = selectedMember.name;
-        _email.textContent      = `Support@${selectedMember.websiteURL}`
-        _phone.textContent      = selectedMember.phoneNumber;
-        _website.textContent    = selectedMember.websiteName;
+        _email.textContent      = `EMAIL: Support@${selectedMember.websiteName}`
+        _phone.textContent      = `PHONE: ${selectedMember.phoneNumber}`;
+        _website.textContent    = `URL: ${selectedMember.websiteName}`;
         _website.href           = selectedMember.websiteURL;
 
-        qualifiedMembers.splice()
+        card.appendChild(_name);
+        card.appendChild(_logo);
+        card.appendChild(_email);
+        card.appendChild(_phone);
+        card.appendChild(_website);
+
+        homepageCards.appendChild(card);
+
+        qualifiedMembers.splice(memberLoopId,1);
     }
 
 }
