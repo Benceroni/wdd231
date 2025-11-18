@@ -70,7 +70,7 @@
         grid-template-columns: 1fr;
     }
     .homeCard#cardHighlight{
-        grid-template-columns: 1/2;
+        grid-template-columns: 1fr;
         grid-column: 1/2;
     }
     #cardHighlight{
