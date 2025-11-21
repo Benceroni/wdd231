@@ -86,10 +86,10 @@ function showAllCourses(){
     // .filter(course=> course.completed ==true)
     relevantCourses.forEach(course => {
         if (course.completed === true){
-            renderCompletedCourse(course.title)
+            renderCompletedCourse(course)
         }
         else{
-            renderCourse(course.title);
+            renderCourse(course);
         }
     })
 
@@ -101,10 +101,10 @@ function showWddCourses(){
     const relevantCourses = courses.filter(course => course.subject == "WDD")
     relevantCourses.forEach(course => {
         if (course.completed === true){
-            renderCompletedCourse(course.title)
+            renderCompletedCourse(course)
         }
         else{
-            renderCourse(course.title);
+            renderCourse(course);
         }
     });
     renderTotalCourses(relevantCourses);
@@ -115,27 +115,56 @@ function showCseCourses(){
     const relevantCourses = courses.filter(course => course.subject == "CSE")
     relevantCourses.filter(course => {
         if (course.completed === true){
-            renderCompletedCourse(course.title)
+            renderCompletedCourse(course)
         }
         else{
-            renderCourse(course.title);
+            renderCourse(course);
         }
     });
     renderTotalCourses(relevantCourses);
 }
 
-function renderCourse(courseName){
-    courseDestination.innerHTML += `<p>${courseName}</p>`
+function renderCourse(_course){
+    console.log(_course);
+    const _button = document.createElement("button");
+    _button.setAttribute("type","button")
+    _button.textContent = _course.title;
+    _button.addEventListener("click",() => {showCourseDialog(_course)})
+    courseDestination.appendChild(_button);
 }
-function renderCompletedCourse(courseName){
+function renderCompletedCourse(_course){
     // console.log("completed course rendered")
-    courseDestination.innerHTML += `<p class="complete">${courseName}✅</p>`
+    console.log(_course);
+    const _button = document.createElement("button");
+    _button.setAttribute("type","button")
+    _button.setAttribute("class","complete")
+    _button.textContent = _course.title + "✅";
+    _button.addEventListener("click",() => {showCourseDialog(_course)})
+    courseDestination.appendChild(_button);
 }
 
 function renderTotalCourses(courseArray){
     console.log(courseArray);
     document.querySelector("#totalCourses").innerHTML = `Total number of credits shown: ${courseArray.reduce((accumulator,currentValue) => accumulator + currentValue.credits, 0)}`
 }
+
+function showCourseDialog(_course){
+    const dialog = document.querySelector("#course-details");
+    dialog.innerHTML = `
+        <button id = "closeModal">❌</button>
+        <h2>${_course.subject} ${_course.number}</h2>
+        <h3>${_course.title}</h3>
+        <p>Credits: ${_course.credits}</p>
+        <p>Certificate: ${_course.certificate}</p>
+        <p>${_course.description}</p>
+        <p>Technologies: ${_course.technology.join(', ')}</p>
+    `;
+    dialog.showModal();
+
+    closeModal.addEventListener("click", () => {dialog.close()});
+
+}
+
 
 showAllCourses();
 

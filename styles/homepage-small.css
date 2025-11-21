@@ -108,15 +108,15 @@ main #studentPhoto img{
     margin: 1rem auto;
 }
 
-main p{
+#buttons button{
     font-size: x-large;
     padding: 1rem;
 }
 
-main button{
+#buttons button{
     background-color: var(--secondary-color);
     color: white;
-    width: 32%;
+
     border: none;
     font-family: "Lexend", sans-serif;
     padding: 1rem;
@@ -127,10 +127,25 @@ section#filler{
     display: none;
 }
 
+
+
 /* ------------C O U R S E S    D I S P L A Y---------------- */
 
+main #buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+main #courses button{
+    border: none;
+    width: 100%;
+    margin: .25rem 0;
+    padding: 1rem;
+}
+
 .complete{
-    background-color: hsla(240, 56%, 35%, 0.8);
+    background-color: hsla(240, 57%, 37%, 0.8);
     color: white;
 }
 
@@ -157,4 +172,19 @@ footer{
 footer span{
     width: 100%;
     text-align: center;
+}
+
+
+/* ----------------------D I A L O G------------------------- */
+
+#course-details{
+
+}
+
+#course-details h2{
+    background-color: var(--secondary-color);
+}
+
+#course-details::backdrop{
+    background-color: hsla(0, 0%, 100%, 0.51);
 }

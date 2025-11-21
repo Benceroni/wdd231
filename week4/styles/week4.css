@@ -1,0 +1,41 @@
+#throbber{
+    margin: 5rem;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+
+
+    
+    border-radius: 50%;
+    border: 10px solid transparent;
+    border-color: rgb(117, 117, 117) transparent rgb(117, 117, 117) transparent;
+    animation: t  1.5s linear infinite;
+    box-shadow: 0 0 1rem rgb(65, 105, 225);
+}
+
+/* @keyframes spin {
+    100%{transform: rotate(360deg);}
+} */
+
+/* #throbber::after {
+  content: '⚙️';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulse 1.5s ease-in-out infinite;
+} */
+
+/* @keyframes pulse { 
+  0%, 100% {transform: translate(-50%, -50%) scale(1);} 
+  50% {transform: translate(-50%, -50%) scale(1.25);}
+} */
+
+
+#throbber ::after{
+    content: '⚙️';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
