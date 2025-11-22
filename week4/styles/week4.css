@@ -9,7 +9,7 @@
     border-radius: 50%;
     border: 10px solid transparent;
     border-color: rgb(117, 117, 117) transparent rgb(117, 117, 117) transparent;
-    animation: t  1.5s linear infinite;
+    /* animation: t  1.5s linear infinite; */
     box-shadow: 0 0 1rem rgb(65, 105, 225);
 }
 
@@ -32,10 +32,7 @@
 } */
 
 
-#throbber ::after{
-    content: '⚙️';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+#throbber :hover{
+  transform: rotate(360deg);
 }
