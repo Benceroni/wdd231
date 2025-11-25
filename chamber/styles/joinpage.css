@@ -12,64 +12,60 @@ main, .throaway{
 
 }
 
-form{
-    label{
-        display: grid;
-        padding: 1rem 0;
-        gap: .1rem;
-    }
 
-    label#text{
-        padding: 1rem;
-    }
-
-    input,textarea,select{
-        padding: 1rem;
-        border: 1px solid rgb(194, 176, 176);
-        border-left-color:#555;
-        border-left-width: 5px;
-        border-radius: .5rem;
-    }
-
-    input[type="number"]::-webkit-outer-spin-button,
-    input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-    }
-
-    input[type=submit]{
-        border-left-width: 1px;
-    }
-
-    textarea{
-        resize: none;
-        height: 10rem;
-    }
-
-    #hide{
-        display: none;
-    }
-
-    #submitButton{
-        width: 100%;
-    }
-
-    input:required {border-left-color: #d70000;}
-    input:focus {border-left-color: black; outline: none;}
-    input:required:valid{border-left-color: var(--header-color)}
+form label{
+    display: grid;
+    padding: 1rem 0;
+     gap: .1rem;
+}
+form label#text{
+    padding: 1rem;
 }
 
+form input,form textarea,form select{
+    padding: 1rem;
+    border: 1px solid rgb(194, 176, 176);
+    border-left-color:#555;
+    border-left-width: 5px;
+    border-radius: .5rem;
+}
 
+form input[type="number"]::-webkit-outer-spin-button,
+form input[type="number"]::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+form input[type=submit]{
+    border-left-width: 1px;
+}
+
+form textarea{
+    resize: none;
+    height: 10rem;
+}
+
+form #hide{
+    display: none;
+}
+
+form #submitButton{
+    width: 100%;
+}
+
+form input:required {border-left-color: #d70000;}
+form input:focus {border-left-color: black; outline: none;}
+form input:required:valid{border-left-color: var(--header-color)}
 
 
 #membershipLevels{
     display: grid;
     gap: 1rem;
+}
 
-    .membershipCard{
-        height: 100%;
-        margin: 0 auto;
-        aspect-ratio: 16/10;
-        background-color: aquamarine;
-    }
+#membershipLevels.membershipCard{
+    height: 100%;
+    margin: 0 auto;
+    aspect-ratio: 16/10;
+    background-color: aquamarine;
 }
