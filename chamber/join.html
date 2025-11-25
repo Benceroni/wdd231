@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="styles/heroimage.css">
     <link rel="stylesheet" href="styles/homepage.css">
     <link rel="stylesheet" href="styles/joinpage.css">
+    <link rel="stylesheet" href="styles/active.css">
 
     <!-- _____________________F O N T S ___________________________ -->
 
@@ -85,13 +86,25 @@
             <input id="submitButton" type="submit" value="Apply for Membership">
         </form>
         <section id="membershipLevels">
-            <section class="membershipCard">
-                filler content
+
+            <section class="membershipCard np">
+                <h2>Non Profit Membership</h2>
+                <button onclick="showmodal('Non-Profit','0.00 for qualifying Non-Profits','Chamber of Commerce Directory')">Learn more</button>
             </section>
-            <section class="membershipCard"></section>
-            <section class="membershipCard"></section>
-            <section class="membershipCard"></section>
+            <section class="membershipCard bronze">
+                <h2>Bronze Membership</h2>
+                <button onclick="showmodal('Bronze','49.99','Chamber of Commerce Directory')">Learn more</button>
+            </section>
+            <section class="membershipCard silver">
+                <h2>Silver Membership</h2>
+                <button onclick="showmodal('Silver','149.99','Chamber of Commerce Directory<br>Spotlight appearance on homepage')">Learn more</button>
+            </section>
+            <section class="membershipCard gold">
+                <h2>Gold Membership</h2>
+                <button onclick="showmodal('Gold','499.99','Chamber of Commerce Directory<br>Spotlight appearance on homepage<br>Chamber of Commerce hall plaque')">Learn more</button>
+            </section>
         </section>
+        <dialog id="membershipDetails"></dialog>
     </main>
     <footer>
         <div id="footerContainer">

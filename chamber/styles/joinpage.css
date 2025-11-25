@@ -57,15 +57,59 @@ form input:required {border-left-color: #d70000;}
 form input:focus {border-left-color: black; outline: none;}
 form input:required:valid{border-left-color: var(--header-color)}
 
-
 #membershipLevels{
     display: grid;
-    gap: 1rem;
+    gap: 3rem;
 }
 
-#membershipLevels.membershipCard{
-    height: 100%;
+#membershipLevels .membershipCard{
+    width: 75%;
+    padding: 1rem;
+    max-width: 100%;
     margin: 0 auto;
-    aspect-ratio: 16/10;
-    background-color: aquamarine;
+    border: .5rem solid;
+    border-radius: 1rem;
+    animation: borderSlide 30s infinite;
 }
+
+#membershipLevels .np{
+    animation: npSlide 30s infinite;
+}
+
+#membershipLevels .bronze{
+    animation: bronzeSlide 30s infinite;
+}
+
+#membershipLevels .silver{
+    animation: silverSlide 30s infinite;
+}
+
+#membershipLevels .gold{
+    animation: goldSlide 30s infinite;
+}
+
+@keyframes borderSlide{
+    0%, 100% {border-color: #d70000 transparent }
+    50% {border-color: transparent #d70000 }
+}
+
+@keyframes npSlide {
+    0%, 100% {border-color: #8a8a8a transparent }
+    50% {border-color: transparent #8a8a8a }
+}
+
+@keyframes bronzeSlide {
+    0%, 100% {border-color: #e9810a transparent }
+    50% {border-color: transparent #e9810a }
+}
+
+@keyframes silverSlide {
+    0%, 100% {border-color: #dcdcdc transparent }
+    50% {border-color: transparent #dcdcdc }
+}
+
+@keyframes goldSlide {
+    0%, 100% {border-color: #d39f00 transparent }
+    50% {border-color: transparent #d39f00 }
+}
+
