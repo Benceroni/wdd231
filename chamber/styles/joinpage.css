@@ -6,12 +6,12 @@ main, .throaway{
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
     margin-bottom: 3rem;
-    h1{
-        grid-column: 1/-1;
-    }
 
 }
 
+main h1{
+        grid-column: 1/-1;
+    }
 
 form label{
     display: grid;
