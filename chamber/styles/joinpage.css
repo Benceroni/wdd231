@@ -31,13 +31,19 @@ form{
         border-radius: .5rem;
     }
 
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+
     input[type=submit]{
         border-left-width: 1px;
     }
 
     textarea{
         resize: none;
-
+        height: 10rem;
     }
 
     #hide{
@@ -49,7 +55,7 @@ form{
     }
 
     input:required {border-left-color: #d70000;}
-    input:focus {border-left-color: black; }
+    input:focus {border-left-color: black; outline: none;}
     input:required:valid{border-left-color: var(--header-color)}
 }
 
