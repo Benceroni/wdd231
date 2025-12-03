@@ -8,10 +8,12 @@ destinations_html.innerHTML = ''
 
 points_data.points.forEach(point => {
     destinations_html.innerHTML +=`
+    <section class="card">
     <h2>${point.name}</h2>
-    <figure><img src = "${point.image}" alt = "image of ${point.name}"</figure>
+    <figure><img src = "${point.image}" alt = "image of ${point.name}"></figure>
     <address>${point.address}</address>
     <p>${point.description}</p>
     <button>Learn More</button>
+    </section>
     `
 });

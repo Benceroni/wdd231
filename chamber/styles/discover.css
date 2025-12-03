@@ -1,0 +1,95 @@
+/* figure{
+    margin: 0;
+} */
+
+#destinations{
+    display: grid;
+    gap: 1rem 3rem;
+    /* grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); */
+}
+
+.card{
+    max-width: 100%;
+    
+    border: 2px solid black;
+    border-radius: .3rem;
+
+    padding: .5rem;
+    display: grid;
+    gap: .5rem;
+
+
+
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "name"
+    "image"
+    "address"
+    "description"
+    "button"
+    ;
+
+}
+
+.card h2{
+    grid-area: name;
+}
+
+.card figure{
+    display: block;
+    margin: auto;
+    grid-area: image;
+    width: 100%;
+}
+
+img{
+    display: block;
+    width: 100%;
+
+}
+
+.card p{
+    grid-area: description;
+}
+
+.card button{
+    padding: 1rem;
+    grid-area: button;
+    font-size: larger;
+    background-color: var(--secondary-color);
+    border-radius: .3rem;
+}
+
+.card address{
+    grid-area: address;
+}
+
+@media only screen and (min-width: 32rem) {
+
+    .card{
+        grid-template-columns: 1fr 1fr ;
+        grid-template-areas:
+        "image name "
+        "image address"
+        "image description"
+        "image button";
+}
+}
+
+@media only screen and (min-width: 64rem) {
+
+    #destinations{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "name"
+        "image"
+        "description"
+        "address"
+        "button";
+}
+
+}
