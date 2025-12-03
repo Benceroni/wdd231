@@ -1,6 +1,7 @@
-/* figure{
-    margin: 0;
-} */
+#flavorText{
+    font-size: x-large;
+    font-style: italic;
+}
 
 #destinations{
     display: grid;
