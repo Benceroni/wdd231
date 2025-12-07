@@ -1,14 +1,13 @@
 const playlistURL = "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCUekuiQDM_A2237QIk5_f-w&key=AIzaSyAo-VDju_qyliZ4wK88GuHwHSDmAo5nRkc"
 
-var youtube = [];
-
 async function fetchPlaylist() {
     try{
         const response = await fetch(playlistURL);
         if (response.ok){
             const playlist = await response.json();
             console.table(playlist.items[0].contentDetails.relatedPlaylists.uploads);
-            return fetchYoutube(playlist.items[0].contentDetails.relatedPlaylists.uploads);
+            // return fetchYoutube(playlist.items[0].contentDetails.relatedPlaylists.uploads);
+            return await fetchYoutube(playlist.items[0].contentDetails.relatedPlaylists.uploads);
         }
         else{
             throw Error(await response.text());
@@ -24,7 +23,7 @@ async function fetchYoutube(_playlistId) {
     let nextPageToken = "";
     let videos = [];
     do{
-    const _url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet,contentDetails&playlistId=${_playlistId}&Results=50&pageToken=${nextPageToken}&key=AIzaSyAo-VDju_qyliZ4wK88GuHwHSDmAo5nRkc`
+    const _url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet,contentDetails&playlistId=${_playlistId}&&maxResults=50&pageToken=${nextPageToken}&key=AIzaSyAo-VDju_qyliZ4wK88GuHwHSDmAo5nRkc`
 
     const response = await fetch(_url).then(res =>res.json());
     
@@ -35,8 +34,6 @@ async function fetchYoutube(_playlistId) {
     return videos;
 }
 
+const youtubeData = await fetchPlaylist();
 
-youtube = fetchPlaylist()
-console.log(youtube)
-
-export default youtube
+export default youtubeData;
