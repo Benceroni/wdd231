@@ -1,0 +1,19 @@
+#youtubeVideos{
+    display: grid;
+    grid-template-columns:1fr;
+}
+
+#youtubeVideos a {
+    padding: 1rem;
+}
+
+
+#youtubeVideos img{
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    width: 100%;
+}
+
+#youtubeVideos h3{
+    max-width: 100%;
+}
