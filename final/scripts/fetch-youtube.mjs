@@ -5,7 +5,7 @@ async function fetchPlaylist() {
         const response = await fetch(playlistURL);
         if (response.ok){
             const playlist = await response.json();
-            console.table(playlist.items[0].contentDetails.relatedPlaylists.uploads);
+            // console.table(playlist.items[0].contentDetails.relatedPlaylists.uploads);
             // return fetchYoutube(playlist.items[0].contentDetails.relatedPlaylists.uploads);
             return await fetchYoutube(playlist.items[0].contentDetails.relatedPlaylists.uploads);
         }
@@ -35,5 +35,12 @@ async function fetchYoutube(_playlistId) {
 }
 
 const youtubeData = await fetchPlaylist();
+
+if (false){
+    localStorage.setItem("localYoutubeData",await fetchPlaylist());
+    console.log(localStorage.getItem("local data is: " + localYoutubeData));
+}
+
+
 
 export default youtubeData;
