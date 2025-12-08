@@ -1,10 +1,12 @@
 #youtubeVideos{
+    margin: 0 auto;
     display: grid;
-    grid-template-columns:1fr;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
 }
 
 #youtubeVideos a {
-    padding: 1rem;
+    padding: 0 1rem 1rem 1rem;
 }
 
 
@@ -12,8 +14,20 @@
     aspect-ratio: 16/9;
     object-fit: cover;
     width: 100%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.361);
+    border: 1px black solid;
+    /* position: absolute; */
+    /* bottom: 0; */
 }
 
 #youtubeVideos h3{
     max-width: 100%;
+}
+
+.videoCard{
+    width: 100% - 2rem;
+    /* max-width: 400px; */
+    border-radius: 5px;
+    border: 3px black solid;
+    position: relative;
 }

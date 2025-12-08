@@ -33,7 +33,7 @@ function renderVideos(_newestFirst){
     var literals_array = [];
     youtubeData.forEach(video => {
         const _video_literal=`
-            <a href= "https://www.youtube.com/watch?v=${video.contentDetails.videoId}" p class = videoCard>
+            <a href= "https://www.youtube.com/watch?v=${video.contentDetails.videoId}" class = videoCard>
                 <h3>
                     ${video.snippet.title}
                 </h3>
