@@ -1,8 +1,7 @@
 import youtubeData from "./fetch-youtube.mjs";
 
 const youtube_container = document.querySelector("#youtubeVideos");
-// const recent_first_buutton = document.querySelector("#")
-// const not_recent_first_button = document.querySelector("#")
+const youtube_buttons = document.querySelector("#youtubeButtons");
 
 
 var displayRecentFirst = true;
@@ -12,8 +11,8 @@ if (localStorage.getItem("displayOrder")){
     displayRecentFirst = localStorage.getItem("displayOrder");
 }
 
-
-
+document.querySelector("#show-old").addEventListener("click" ,showOldest);
+document.querySelector("#show-new").addEventListener("click" ,showMostRecent);
 
 
 function showMostRecent(){
@@ -22,10 +21,14 @@ function showMostRecent(){
 }
 
 function showOldest(){
+    console.log("showing oldest first")
     displayRecentFirst = false;
     renderVideos(displayRecentFirst);
 }
 
+function simpleFunction(){
+    console.log("simple function working")
+}
 
 
 
