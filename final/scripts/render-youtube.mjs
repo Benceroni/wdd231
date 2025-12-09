@@ -32,20 +32,19 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
-console.log(youtubeData);
-
 function renderVideos(_newestFirst){
     var literals_array = [];
     
     youtubeData.forEach(video => {
+        const time = new Date(video.snippet.publishedAt.substring(0,10));
         const _video_literal=`
             <a href= "https://www.youtube.com/watch?v=${video.contentDetails.videoId}" class = videoCard>
                 <h3>
                     ${video.snippet.title}
                 </h3>
                 <img src = "${video.snippet.thumbnails.high.url}" loading="lazy"></img>
-                <p></p>
-                <p></p>
+                <p>${new Intl.DateTimeFormat("en-US").format(time)}</p>
+                <p>youtube.com/watch?v=${video.contentDetails.videoId}</p>
             </a>
         `
         if (_newestFirst){
