@@ -6,6 +6,6 @@
 
 const footer_span = document.querySelector("#videoLink");
 
-const link = "<strong>/INSERT LINK IN THE JS FILE</strong>";
+const link = `<a href = "https://youtu.be/AyWaoGwzcd4"> Youtube Video Link <a>`;
 
 footer_span.innerHTML = link;
