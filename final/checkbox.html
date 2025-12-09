@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,9 +12,10 @@
 
     <!-- <link rel="stylesheet" href="styles/normalize.css"> -->
     <link rel="stylesheet" href="styles/final-project-base.css">
-    <link rel="stylesheet" href="styles/video-rendering.css">
+    <!-- <link rel="stylesheet" href="styles/video-rendering.css"> -->
     <link rel="stylesheet" href="styles/navigation.css">
     <link rel="stylesheet" href="styles/active.css">
+    <link rel="stylesheet" href="styles/joinpage.css">
 
     <!-- ------------------------------ F O N T S --------------------------------------------------- -->
 
@@ -27,6 +29,7 @@
     <script src="scripts/dates.js" defer></script>
     <script src="scripts/footer-link.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/form.js" defer></script>
 
 
     <!-- <script src="scripts/fetch-youtube.mjs" type="module" defer></script> -->
@@ -52,16 +55,25 @@
             <div id="navButton" class="hamburger"></div>
             <nav id="navigation">
                 <ul>
-                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="index.html" >Home</a></li>
                     <li><a href="library.html">Video Library</a></li>
-                    <li><a href="checkbox.html" >Form</a></li>
+                    <li><a href="#" class="active">Form</a></li>
                     <li><a href="faq.html">FAQ(s)</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-
+<main>
+    <h1>Fill out the Form</h1>
+        <form method="get" action="thankyou.html" id="joinForm">
+            <label>First Name<input                         type="text"     name="first"        required autocomplete="given-name"          title="Your First Name"         placeholder="didn't really"    ></label>
+            <label>Last Name<input                          type="text"     name="last"         required autocomplete="family-name"         title="Your Last Name"          placeholder="want to add this"    ></label>
+            <label>Email<input                              type="email"    name="email"        required autocomplete="email"               title="Your Email"              placeholder="example@organization.com"    ></label>
+            <input id="submitButton" type="submit" value="Sign up for sign up form">
+        </form>
+        <dialog id="membershipDetails"></dialog>
+    </main>
     </main>
     <footer>
         <div id="footerContainer">
@@ -72,3 +84,5 @@
     </footer>
 </body>
 </html>
+
+

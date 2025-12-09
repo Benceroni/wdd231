@@ -18,6 +18,7 @@ document.querySelector("#show-new").addEventListener("click" ,showMostRecent);
 function showMostRecent(){
     displayRecentFirst = true;
     renderVideos(displayRecentFirst);
+    
 }
 
 function showOldest(){
@@ -26,9 +27,6 @@ function showOldest(){
     renderVideos(displayRecentFirst);
 }
 
-function simpleFunction(){
-    console.log("simple function working")
-}
 
 
 
