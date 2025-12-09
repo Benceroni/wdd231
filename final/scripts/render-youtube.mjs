@@ -1,7 +1,7 @@
 import youtubeData from "./fetch-youtube.mjs";
 
 const youtube_container = document.querySelector("#youtubeVideos");
-const youtube_buttons = document.querySelector("#youtubeButtons");
+const youtube_preview = document.querySelector("#videoPreview");
 
 
 var displayRecentFirst = true;
@@ -27,7 +27,9 @@ function showOldest(){
     renderVideos(displayRecentFirst);
 }
 
-
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
 
 
 function renderVideos(_newestFirst){
@@ -52,6 +54,22 @@ function renderVideos(_newestFirst){
     literals_array.forEach(element => {
         youtube_container.innerHTML += element;
     });
+}
+
+function renderThreeRandom(){
+    var literals_array = [];
+    var random_ints = [getRandomInt(youtubeData.length),getRandomInt(youtubeData.length),getRandomInt(youtubeData.length)];
+    random_ints.forEach(i =>{
+        const video = youtubeData[i];
+        const _video_literal=`
+            <a href= "https://www.youtube.com/watch?v=${video.contentDetails.videoId}" class = videoCard>
+                <h3>
+                    ${video.snippet.title}
+                </h3>
+                <img src = "${video.snippet.thumbnails.high.url}" loading="lazy"></img>
+            </a>
+        `
+    })
 }
 
 console.log(youtubeData)

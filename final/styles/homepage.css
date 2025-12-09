@@ -1,0 +1,36 @@
+#heroimage{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border: 2px solid black;
+    background: #000000;
+    background: linear-gradient(51deg,rgba(0, 0, 0, 1) 0%, rgba(235, 29, 29, 1) 49%);
+    align-items: center;
+    border-radius: .5rem;
+}
+
+#heroimage img{
+    padding: 2rem;
+    grid-column: 3/5;
+    max-height: 450px;
+}
+
+#heroimage #herotext{
+    padding: 2rem;
+    font-size: 3rem;
+    color: white;
+    grid-column: 1/3;
+    z-index: 2;
+    max-width: 100%;
+}
+
+
+@media screen and (max-width: 40rem) {
+    #heroimage{
+    grid-template-columns: 1fr 1fr;
+    }
+
+    #heroimage img{
+        padding: 2rem;
+        grid-column: 1/3;
+    }
+}

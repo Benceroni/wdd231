@@ -5,3 +5,23 @@ header,footer,main{
     font-family: "lexend",sans-serif;
 }
 
+body{
+    margin: 0;
+}
+
+footer{
+    margin-top: 2rem;
+    padding: 2rem 0;
+    background: #ffffff;
+    background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(253, 29, 29, 1) 50%);
+    /* margin: 0; */
+    /* width: 100%; */
+}
+
+#footerContainer {
+    margin: 0 auto;
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: var(--content-max-width);
+}
