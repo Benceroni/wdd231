@@ -1,0 +1,16 @@
+main img{
+    display: block;
+    justify-self: right;
+    max-width: fit-content;
+}
+
+main figure{
+    border-top: 3px black solid;
+    border-bottom: 3px black solid;
+    padding: 1rem;
+    font-size: large;
+}
+
+main p{
+    font-size: x-large;
+}

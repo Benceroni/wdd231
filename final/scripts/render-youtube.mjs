@@ -42,7 +42,7 @@ function renderVideos(_newestFirst){
                 <h3>
                     ${video.snippet.title}
                 </h3>
-                <img src = "${video.snippet.thumbnails.high.url}" loading="lazy"></img>
+                <img src = "${video.snippet.thumbnails.high.url}" loading="lazy" alt="${video.snippet.title}"></img>
                 <p>${new Intl.DateTimeFormat("en-US").format(time)}</p>
                 <p>youtube.com/watch?v=${video.contentDetails.videoId}</p>
             </a>
@@ -70,7 +70,7 @@ function renderThreeRandom(){
                 <h3>
                     ${video.snippet.title}
                 </h3>
-                <img src = "${video.snippet.thumbnails.high.url}" loading="lazy"></img>
+                <img src = "${video.snippet.thumbnails.high.url}" loading="lazy" alt="${video.snippet.title}"></img>
             </a>
         `
         youtube_preview.innerHTML +=_video_literal
