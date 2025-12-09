@@ -7,6 +7,7 @@
 
 #youtubeVideos a {
     padding: 0 1rem 1rem 1rem;
+        text-decoration: none;
 }
 
 
@@ -16,12 +17,13 @@
     width: 100%;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.361);
     border: 1px black solid;
-    /* position: absolute; */
-    /* bottom: 0; */
+    border-radius: 4px;
 }
 
 #youtubeVideos h3{
     max-width: 100%;
+
+    color: black;
 }
 
 .videoCard{
