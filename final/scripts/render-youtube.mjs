@@ -32,9 +32,11 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
+console.log(youtubeData);
 
 function renderVideos(_newestFirst){
     var literals_array = [];
+    
     youtubeData.forEach(video => {
         const _video_literal=`
             <a href= "https://www.youtube.com/watch?v=${video.contentDetails.videoId}" class = videoCard>
@@ -42,6 +44,8 @@ function renderVideos(_newestFirst){
                     ${video.snippet.title}
                 </h3>
                 <img src = "${video.snippet.thumbnails.high.url}" loading="lazy"></img>
+                <p></p>
+                <p></p>
             </a>
         `
         if (_newestFirst){
