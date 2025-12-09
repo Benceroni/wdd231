@@ -11,9 +11,10 @@ if (localStorage.getItem("displayOrder")){
     displayRecentFirst = localStorage.getItem("displayOrder");
 }
 
+if (document.querySelector("#show-old")){
 document.querySelector("#show-old").addEventListener("click" ,showOldest);
 document.querySelector("#show-new").addEventListener("click" ,showMostRecent);
-
+}
 
 function showMostRecent(){
     displayRecentFirst = true;
@@ -57,7 +58,7 @@ function renderVideos(_newestFirst){
 }
 
 function renderThreeRandom(){
-    var literals_array = [];
+    // var literals_array = [];
     var random_ints = [getRandomInt(youtubeData.length),getRandomInt(youtubeData.length),getRandomInt(youtubeData.length)];
     random_ints.forEach(i =>{
         const video = youtubeData[i];
@@ -69,11 +70,21 @@ function renderThreeRandom(){
                 <img src = "${video.snippet.thumbnails.high.url}" loading="lazy"></img>
             </a>
         `
+        youtube_preview.innerHTML +=_video_literal
     })
 }
 
 console.log(youtubeData)
 
-renderVideos(displayRecentFirst);
+
+if (youtube_container){
+    renderVideos(displayRecentFirst);
+}
+
+if (youtube_preview){
+    console.log("running")
+    renderThreeRandom()
+}
+
 
 "If the maxresdefault image is unavailable, a 4:3 thumbnail can be used and cropped to fit a 16:9 display using CSS by setting the container to overflow: hidden."

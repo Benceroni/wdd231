@@ -23,6 +23,36 @@
     max-width: 100%;
 }
 
+#library-link a{
+    text-decoration: none;
+    
+}
+
+#library-link h3{
+    font-size: x-large;
+    padding: 1rem;
+    border: 3px solid black;
+    border-radius: .5rem;
+    color: black;
+    transition: background-color 300ms;
+    background-color: white;
+}
+
+#library-link h3:hover{
+    transition: background-color 300ms;
+    background-color: rgba(235, 29, 29, 1);
+}
+
+#library-link h3,#library-link p{
+
+    margin:1rem 0;
+}
+
+#library-link p{
+    font-size: larger;
+    padding-left: .5rem;
+}
+
 
 @media screen and (max-width: 40rem) {
     #heroimage{
